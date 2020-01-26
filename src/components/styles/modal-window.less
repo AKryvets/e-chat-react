@@ -1,0 +1,250 @@
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 512px;
+  min-width: 300px;
+  background-color: #FAFBFF;
+  border-radius: 5px;
+  padding: 20px 40px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+
+  &.show {
+    display: block;
+  }
+}
+
+
+.modal-window__close {
+  cursor: pointer;
+  color: #bfb8bf;
+  font-size: 18px;
+  padding-left: 55%;
+  margin-left: 45%;
+}
+
+.link {
+  display: flex;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  color: #707C97;
+
+  &__button {
+    color: #587DD6;
+    cursor: pointer;
+  }
+}
+
+.modal-entry-window, .modal-reg-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 512px;
+  min-width: 300px;
+  background-color: #FAFBFF;
+  border-radius: 5px;
+  padding: 30px 40px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+
+  &.show {
+    display: block;
+  }
+}
+
+.modal-window__label {
+  line-height: 20px;
+  color: #587DD6;
+  text-align: center;
+  text-shadow: 4px 3px 4px rgba(191, 184, 191, 1);
+  font-size: 24px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.modal-entry-window__label {
+  line-height: 20px;
+  color: #587DD6;
+  text-align: center;
+  text-shadow: 4px 3px 4px rgba(191, 184, 191, 1);
+  font-size: 24px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.forms__label {
+  font-size: 24px;
+  font-family: 'Cabin', sans-serif;
+  line-height: 50px;
+  color: #707C97;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form {
+  padding-top: 20px;
+
+  &__input {
+    box-sizing: border-box;
+    background: #FAFBFF;
+    color: #707C97;
+    outline: none;
+    width: 100%;
+    height: 48px;
+    border-radius: 3px;
+    padding: 7px;
+    border: 1px solid white;
+    position: relative;
+    transition: all 0.5s;
+    box-shadow: 0px 4px 4px 0px rgba(191, 184, 191, 1);
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    margin-top: 30px;
+
+    &::-webkit-input-placeholder {
+      color: rgba(191, 184, 191, 1);
+    }
+
+    &::-moz-placeholder {
+      color: rgba(191, 184, 191, 1);
+    }
+
+    &:-moz-placeholder {
+      color: rgba(191, 184, 191, 1);
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(191, 184, 191, 1);
+    }
+  }
+
+  &__error {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Cabin', sans-serif;
+    color: #1fae1f;
+    margin-top: 5px;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__link {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.link {
+  &__button {
+    cursor: pointer;
+  }
+}
+
+.label__labels {
+  white-space: nowrap;
+  display: flex;
+  font-size: 18px;
+  margin-right: auto;
+  padding-right: 15px;
+}
+
+.label__submit {
+  font: inherit;
+  background-color: #87A7EF;
+  cursor: pointer;
+  border: 1px solid #87A7EF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 50px;
+  min-width: 150px;
+  padding: 0 20px;
+  color: #FAFBFF;
+  opacity: 1;
+  font-size: 20px;
+  justify-content: space-between;
+
+}
+
+#setNickname {
+  margin-left: auto;
+  min-width: 130px;
+  padding: 0;
+}
+
+#field-submit, #field-signup {
+  justify-content: center;
+}
+
+.overlay {
+  height: calc(95% - 112px);
+  width: 100%;
+  background: rgba(191, 184, 191, 1);
+  opacity: 0.5;
+  display: block;
+  position: fixed;
+  max-width: 850px;
+  z-index: 99;
+
+  &.show {
+    opacity: 0.5;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .forms__label {
+    flex-wrap: wrap-reverse;
+  }
+
+  .label__submit {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+  }
+
+  .label__labels {
+    padding-right: 0;
+  }
+
+  .modal-entry-window, .modal-reg-window, .modal-window {
+    padding: 30px 15px;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .overlay {
+    height: calc(100% - 75px);
+  }
+
+  .modal-entry-window__label {
+    //line-height: 30px;
+    font-size: 20px;
+  }
+
+  .modal-entry-window, .modal-reg-window, .modal-window {
+    padding: 30px 25px;
+  }
+
+  .form {
+    &__error {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .modal-window {
+    padding: 30px 25px;
+  }
+}

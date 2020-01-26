@@ -1,0 +1,24 @@
+.container, .wrapper {
+  width: 850px;
+  height: 95%;
+  background: #ffffff;
+}
+
+.container-entry {
+  min-width: 850px;
+  position: fixed;
+  display: block;
+  height: 95%;
+  background: #fafafa;
+}
+
+@media screen and (min-width: 850px) {
+  //min-width: 850px;
+}
+
+@media screen and (max-width: 850px) {
+  .container, .container-entry, .wrapper {
+    min-width: 100%;
+  }
+}
+
